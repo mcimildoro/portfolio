@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 import Image from "next/image";
 
 import { dataAboutMe, dataSlider } from "../data";
-
+import { dataPhone } from "../data";
 import Title from "./shared/title";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
 import { Button } from "./ui/button";
@@ -46,11 +46,14 @@ const AboutMe = () => {
                         Soy un desarrollador frontend y fullstack con experiencia en tecnologías como React, Node.js, Python, JavaScript, Git, TailwindCSS, y más. 
                         También cuento con experiencia en el desarrollo de aplicaciones industriales utilizando Ignition Automation (SCADA) y herramientas relacionadas. 
                         Me apasiona aprender nuevas tecnologías, afrontar retos complejos y compartir mis conocimientos con la comunidad.</p>
+                
+                        {dataPhone.map((contact) => (
+                            <Button key={contact.id}>
+                                <Phone href={contact.link} size={24} className="mr-2" />Hablamos
+                            </Button>
+                        ))}
 
-                    <Button>
-                        <Phone size={24} className="mr-2" />Hablamos
-                    </Button>
-
+                    
                 </div>   
             </div>
         </div>
