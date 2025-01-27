@@ -293,6 +293,16 @@ export const dataContact = [
     },
 ];
 
+export const dataPhone = [
+    {
+        id: 1,
+        title: "Teléfono",
+        subtitle: "+34 722 477 525",
+        link: "tel:+34722477525",
+        icon: <Phone />,
+    }
+];
+
 export const dataTestimonials = [
     {
         id: 1,
