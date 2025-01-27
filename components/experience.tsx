@@ -7,7 +7,7 @@ import { Progress } from "./ui/progress";
 const Experience = () => {
     return (
         <div className="p-6 md:px-12 py-6 md:py-36 max-w-5xl mx-auto" id="experience">
-            <Title title="Experiencia" subtitle="Mi experiencia" />
+            <Title title="Skills" subtitle="Mi experiencia" />
        
             <div className="grid md:grid-cols-2 gap-8 mt-5">
                 {dataExperience.map((data) =>(
