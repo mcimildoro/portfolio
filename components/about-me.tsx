@@ -2,6 +2,7 @@ import { Phone } from "lucide-react";
 import Image from "next/image";
 
 import { dataAboutMe, dataSlider } from "../data";
+import Link from "next/link";
 import { dataPhone } from "../data";
 import Title from "./shared/title";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
@@ -48,9 +49,11 @@ const AboutMe = () => {
                         Me apasiona aprender nuevas tecnologías, afrontar retos complejos y compartir mis conocimientos con la comunidad.</p>
                 
                         {dataPhone.map((contact) => (
-                            <Button key={contact.id}>
-                                <Phone href={contact.link} size={24} className="mr-2" />Hablamos
-                            </Button>
+                            <div key={contact.id}>
+                                <Link href={contact.link} target="_blank">
+                                    <Button>{contact.icon}¿Hablamos?</Button>
+                                </Link>
+                            </div>
                         ))}
 
                     
