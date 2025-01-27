@@ -7,6 +7,7 @@ import Services from "@/components/services";
 import Testimonials from "@/components/testimonials";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Testimonials />
       <Contact />
       <Footer />
+      <SpeedInsights />
     </main>
   );
 }
