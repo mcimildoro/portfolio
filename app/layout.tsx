@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 const urbanist = Urbanist({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-  title: "Miguel-Cimildoro",
+  title: "Miguel Cimildoro",
   description: "Landing Page by Miguel Cimildoro",
 };
 
