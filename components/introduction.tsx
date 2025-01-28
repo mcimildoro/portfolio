@@ -19,7 +19,7 @@ const Introduction = () => {
                             <Mail className="mr-2"/>Contacta conmigo
                         </Link>
 
-                        <Link className={buttonVariants({variant: "secondary"})} href="/CV Miguel Cimildoro2025.pdf" target="_blank">  
+                        <Link className={buttonVariants({variant: "secondary"})} href="/CV_MiguelCimildoro2025.pdf" target="_blank">  
                             <Paperclip className="mr-2"/>Descargar CV
                         </Link>              
                     </div>
