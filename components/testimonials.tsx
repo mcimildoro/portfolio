@@ -1,3 +1,4 @@
+"use client"
 import { dataTestimonials } from "@/data";
 import Title from "./shared/title";
 import { Carousel, CarouselItem, CarouselPrevious, CarouselNext, CarouselContent } from "./ui/carousel";
@@ -7,7 +8,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 const Testimonials = () => {
     return (
         <div className="p-4 md:px-12 md:py-44 max-w-5xl mx-auto">
-            <Title title="Acerca de mí" subtitle="Mi experiencia y habilidades"/>
+            <Title title="About me" subtitle="My experience and skills"/>
 
             <Carousel className="mx-10 mt-6">
                 <CarouselContent className="gap-8">

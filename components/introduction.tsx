@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
 import { buttonVariants } from "./ui/button";
@@ -16,11 +17,11 @@ const Introduction = () => {
 
                     <div className="flex flex-col md:flex-row gap-2 justify-center mx-auto">
                         <Link className={buttonVariants()} href="#contact">  
-                            <Mail className="mr-2"/>Contacta conmigo
+                            <Mail className="mr-2"/>Contact with me
                         </Link>
 
-                        <Link className={buttonVariants({variant: "secondary"})} href="/CVMiguelCimildoro2025.pdf" target="_blank">  
-                            <Paperclip className="mr-2"/>Descargar CV
+                        <Link className={buttonVariants({variant: "secondary"})} href="/CVMiguelCimildoro2025E.pdf" target="_blank">  
+                            <Paperclip className="mr-2"/>Download CV
                         </Link>              
                     </div>
                 </div>

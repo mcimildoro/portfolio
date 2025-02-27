@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 
 import { dataAboutMe, dataSlider } from "../data";
@@ -12,7 +13,7 @@ import { Button } from "./ui/button";
 const AboutMe = () => {
     return (
         <div className="p-6 md:px-12  max-w-5xl mx-auto" id="about-me">
-            <Title title="Sobre Mi" subtitle="Conoceme" />
+            <Title title=" " subtitle="About me" />
             <div className="grid md:grid-cols-2">
                 <div className="py-12 md:py-0 flex items-center justigy-center">
                     {/* CAROUSEl */}    
@@ -43,14 +44,14 @@ const AboutMe = () => {
                         )}
                     </div>
                     <p className="my-8">
-                        Soy un desarrollador frontend y fullstack con experiencia en tecnologías como React, Node.js, Python, JavaScript, Git, TailwindCSS, y más. 
-                        También cuento con experiencia en el desarrollo de aplicaciones industriales utilizando Ignition Automation (SCADA) y herramientas relacionadas. 
-                        Me apasiona aprender nuevas tecnologías, afrontar retos complejos y compartir mis conocimientos con la comunidad.</p>
+                    I am a frontend developer with experience in technologies such as React, Node.js, Python, JavaScript, Git, Tailwind CSS, and more.
+                    ditionally, I have experience in developing industrial applications using Ignition Automation (SCADA) and specialized tools for process monitoring and control.
+                    I Adam passionate about learning new technologies, tackling complex challenges, and sharing knowledge with the community, always striving to optimize performance and user experience in every project.</p>
                 
                         {dataPhone.map((contact) => (
                             <div key={contact.id}>
                                 <Link href={contact.link} target="_blank">
-                                    <Button>{contact.icon}¿Hablamos?</Button>
+                                    <Button>{contact.icon}Shall we talk?</Button>
                                 </Link>
                             </div>
                         ))}

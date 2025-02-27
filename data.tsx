@@ -3,9 +3,9 @@ import { /*BellPlus*/ BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox
 export const dataAboutMe = [
     {
         id: 1,
-        name: "Experiencia",
+        name: "Experience",
         icon: <Briefcase />,
-        description: "+7 años de experiencia",
+        description: "+5 years of experience",
     }
 ];
 
@@ -71,35 +71,35 @@ export const dataPortfolio = [
     },
     {
         id: 2,
-        title: "Desarrollo Web Ágil",
+        title: "Agile Web Development",
         image: "/image-2.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
     },
     {
         id: 3,
-        title: "Estrategias Web",
+        title: "Web Strategies",
         image: "/image-3.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
     },
     {
         id: 4,
-        title: "Navegando Ideas Creativas",
+        title: "Navigating Creative Ideas",
         image: "/image-4.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
     },
     {
         id: 5,
-        title: "Sitios Web Impactantes",
+        title: "Impactful Websites",
         image: "/image-5.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
     },
     {
         id: 6,
-        title: "Proyectos Web Dinámicos",
+        title: "Dynamic Web Projects",
         image: "/image-6.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
@@ -114,42 +114,42 @@ export const dataExperience = [
         experience: [
             {
                 name: "HTML",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 80,
             },
             {
                 name: "CSS",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 80,
             },
             {
                 name: "JavaScript",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 60,
             },
             {
                 name: "Tailwind CSS",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 30,
             },
             {
                 name: "Typescript",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 30,
             },
             {
                 name: "React",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 60,
             },
             {
                 name: "Bootstrap",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 50,
             },
             {
                 name: "Material UI",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 50,
             }
         ],
@@ -160,42 +160,42 @@ export const dataExperience = [
         experience: [
             {
                 name: "Node JS",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 80,
             },
             {
                 name: "Mongo DB",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 75,
             },
             {
                 name: "Python",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 70,
             },
             {
                 name: "MySQL",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 60,
             },
             {
                 name: "PHP",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 60,
             },
             {
                 name: "SCADA",
-                subtitle: "Experimentado",
+                subtitle: "Experienced",
                 value: 80,
             },
             {
                 name: "Java",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 50,
             },
             {
                 name: "Shell Scripting (Bash)",
-                subtitle: "Intermedio",
+                subtitle: "Intermediate",
                 value: 50,
             },
         ],
@@ -206,35 +206,35 @@ export const dataExperience = [
 export const dataServices = [
     {
         id: 1,
-        title: "Desarrollo Web",
+        title: "Web Development",
         icon: <PanelsTopLeft />,
         features: [
             {
-                name: "Desarrollo de sitios web personalizados",
+                name: "Custom web site development",
             },
             {
-                name: "Diseño y desarrollo responsive",
+                name: "Responsive design and development",
             },
             {
-                name: "Automatización de procesos",
+                name: "Process automation",
             },
             {
-                name: "Desarrollo de aplicaciones web",
+                name: "Web application development",
             },
             {
-                name: "Gestión de contenido",
+                name: "Content management",
             },
             {
-                name: "Optimización de rendimiento web",
+                name: "Web performance optimization",
             },
             {
-                name: "Mantenimiento y soporte continuo",
+                name: "Ongoing maintenance and support",
             },
             {
-                name: "Monitoreo y análisis del rendimiento de aplicaciones web",
+                name: "Web application performance monitoring and analysis",
             },
             {
-                name: "Implementación de sistemas de autenticación y seguridad",
+                name: "Implementation of authentication and security systems.",
             }
         ],
     },
@@ -244,25 +244,25 @@ export const dataServices = [
         icon: <Brush />,
         features: [
             {
-                name: "Diseño intuitivo para una experiencia de usuario fluida",
+                name: "Intuitive design for a smooth user experience",
             },
             {
-                name: "Creación de interfaces atractivas y funcionales",
+                name: "Creation of attractive and functional interfaces",
             },
             {
-                name: "Desarrollo de wireframes y mockups detallados",
+                name: "Development of wireframes and detailed mockups",
             },
             {
-                name: "Optimización de la usabilidad para mejorar la accesibilidad",
+                name: "Optimizing usability to improve accessibility",
             },
             {
                 name: "Definición de arquitectura de información clara y organizada",
             },
             {
-                name: "Diseño responsive para adaptarse a diferentes dispositivos",
+                name: "Responsive design to adapt to different devices",
             },
             {
-                name: "Mapas de recorrido del usuario para identificar puntos de mejora",
+                name: "User journey maps to identify points of improvement",
             }
         ],
     },
@@ -272,7 +272,7 @@ export const dataServices = [
 export const dataContact = [
     {
         id: 1,
-        title: "Teléfono",
+        title: "Phone",
         subtitle: "+34 722 477 525",
         link: "tel:+34722477525",
         icon: <Phone />,
@@ -296,7 +296,7 @@ export const dataContact = [
 export const dataPhone = [
     {
         id: 1,
-        title: "Teléfono",
+        title: "Phone",
         subtitle: "+34 722 477 525",
         link: "tel:+34722477525",
         icon: <Phone />,
@@ -306,42 +306,42 @@ export const dataPhone = [
 export const dataTestimonials = [
     {
         id: 1,
-        name: "¿Quién soy?",
-        titulo: "Desarrollador apasionado por la tecnología",
+        name: "Who am I?",
+        titulo: "Developer with a passion for technology",
         description:
-            "Hola, soy Miguel Cimildoro, un desarrollador web especializado en la creación de aplicaciones dinámicas y soluciones innovadoras. Me encanta transformar ideas en productos digitales funcionales y atractivos",
+            "Hi, I'm Miguel Cimildoro, a web developer specialized in creating dynamic applications and innovative solutions. I love transforming ideas into functional and attractive digital products.",
         imageUrl: "/profile-1.jpeg",
     },
     {
         id: 2,
-        name: "¿Qué me apasiona?",
-        titulo: "Diseñar, crear e innovar",
+        name: "What am I passionate about?",
+        titulo: "Design, create and innovate",
         description:
-            "Me impulsa la posibilidad de resolver problemas a través del desarrollo. Ya sea mejorando la experiencia del usuario, optimizando el rendimiento o integrando tecnologías de última generación, siempre estoy buscando nuevos retos que me hagan crecer.",
+            "I am driven by the possibility of solving problems through development. Whether it's improving user experience, optimizing performance or integrating cutting-edge technologies, I'm always looking for new challenges that will make me grow.",
         imageUrl: "/profile-2.jpg",
     },
     {
         id: 3,
-        name: "¿Cómo trabajo?",
-        titulo: "Colaboración y enfoque en el detalle",
+        name: "How do I work?",
+        titulo: "Collaboration and focus on detail",
         description:
-            "Trabajo de manera organizada y colaborativa, siguiendo metodologías ágiles y asegurando que cada detalle esté bien cuidado. Mi objetivo es entregar resultados que cumplan con las expectativas y necesidades del cliente.",
+            "I work in an organized and collaborative manner, following agile methodologies and ensuring that every detail is well taken care of. My goal is to deliver results that meet the client's expectations and needs.",
         imageUrl: "/profile-3.jpeg",
     },
     {
         id: 4,
-        name: "Mis herramientas favoritas",
-        titulo: "Tecnologías que potencian mi trabajo",
+        name: "My favorite tools",
+        titulo: "Technologies that enhance my work",
         description:
-            "Me apoyo en herramientas de última generación para crear aplicaciones eficientes y atractivas. Algunas de mis favoritas incluyen React y Next.js para interfaces dinámicas, y Tailwind CSS para diseños elegantes y responsivos. ",
+            "I rely on state-of-the-art tools to create efficient and attractive applications. Some of my favorites include React and Next.js for dynamic interfaces, and Tailwind CSS for elegant and responsive designs.",
         imageUrl: "/profile-4.jpeg",
     },
     {
         id: 5,
-        name: "Mi visión",
-        titulo: "Crear un impacto positivo con la tecnología",
+        name: "My vision",
+        titulo: "Creating a positive impact with technology",
         description:
-            "Mi objetivo no es solo construir aplicaciones, sino también crear experiencias que inspiren a las personas y les ayuden a resolver problemas. Creo en el poder de la tecnología para transformar vidas y negocios.",
+            "My goal is not only to build applications, but also to create experiences that inspire people and help them solve problems. I believe in the power of technology to transform lives and businesses.",
         imageUrl: "/profile-5.jpeg",
     }
 ];

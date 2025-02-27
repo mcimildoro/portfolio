@@ -1,3 +1,4 @@
+"use client"
 import { dataServices } from "@/data";
 import Title from "./shared/title";
 import { Check } from "lucide-react";
@@ -5,7 +6,7 @@ import { Check } from "lucide-react";
 const Services = () => {
     return (
         <div className="p-6 md:px-12 md:py-14 max-w-5xl mx-auto" id="services">
-            <Title title="Servicios" subtitle="Que ofrezco" />
+            <Title title="Services" subtitle="What I offer" />
 
             <div className="grid md:grid-cols-2 gap-5 mt-7">
                 {dataServices.map((service) => (

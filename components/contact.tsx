@@ -1,3 +1,4 @@
+"use client"
 import { dataContact } from "@/data";
 import Title from "./shared/title";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import ContactForm from "./contact-form";
 const Contact = () => {
     return (
         <div className="p-4 md:ox-12 md:pty-44 max-w-5xl mx-auto" id="contact">
-            <Title title="Contact" subtitle="Ponte en contacto conmigo 📩"/>
+            <Title title=" " subtitle="Contact me 📩"/>
             
             <div className="grid grid-cols-1 md:grid-cols-3 md:gap-7 mt-8">
                 <div>
@@ -16,7 +17,7 @@ const Contact = () => {
                             <p>{contact.title}</p>
                             <p>{contact.subtitle}</p>
                             <Link href={contact.link} target="_blank">
-                                Enviar mensaje
+                            Send message
                             </Link>
                         </div>
                     ))}                   

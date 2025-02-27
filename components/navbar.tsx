@@ -1,3 +1,4 @@
+"use client"
 import { itemsNavbar } from "@/data";
 import Link from "next/link";
 import ToggleTheme from "./toggle-theme";
