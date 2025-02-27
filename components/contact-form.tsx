@@ -64,7 +64,7 @@ const ContactForm = () => {
                 <FormField control={form.control} name="message" render={({field}) =>(
                     <FormItem>
                         <FormControl>
-                            <Textarea placeholder="Escribe tu mensaje" {...field} className="dark:bg-slate-800" />
+                            <Textarea placeholder="Write your message" {...field} className="dark:bg-slate-800" />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
