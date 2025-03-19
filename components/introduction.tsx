@@ -1,35 +1,91 @@
 "use client"
 import Link from 'next/link';
-import Image from 'next/image';
-import { buttonVariants } from "./ui/button";
-import { Mail, Paperclip } from "lucide-react";
-import Container from './shared/container';
+
+import { Button, buttonVariants } from "./ui/button";
+import { motion } from 'framer-motion';
+import { Paperclip, ArrowDown } from "lucide-react";
+
+import { useEffect, useState } from 'react';
 
 const Introduction = () => {
+
+    const [text, setText] = useState("")
+      const fullText = "Front-end developer"
+      const [index, setIndex] = useState(0)
+      
+      useEffect(() => {
+        if (index < fullText.length) {
+          const timeout = setTimeout(() => {
+            setText((prev: string) => prev + fullText[index])
+            setIndex((prev: number) => prev + 1)
+          }, 100)
+          return () => clearTimeout(timeout)
+        }
+      }, [index])
+
     return (
-        <Container>
-            <div className="text-center" id="home">
-                <h3 className="text-xl mb-3">Hello I´m Miguel</h3>
-                <h1 className="text-4xl font-bold mb-2" >Cimildoro💻</h1>
-                <h2 className="text-2xl text-gray-400">Frontend Developer</h2>
-                
-                <div className="flex items-center justify-center mt-5">
+     
 
-                    <div className="flex flex-col md:flex-row gap-2 justify-center mx-auto">
-                        <Link className={buttonVariants()} href="#contact">  
-                            <Mail className="mr-2"/>Contact with me
-                        </Link>
 
-                        <Link className={buttonVariants({variant: "secondary"})} href="/CVMiguelCimildoro2025E.pdf" target="_blank">  
-                            <Paperclip className="mr-2"/>Download CV
-                        </Link>              
-                    </div>
-                </div>
-                <div className="flex items-center justify-center mt-5">
-                    <Image  src="/profilem2.png" alt="Profile pic" width={400} height={400} />
-                </div>
+        <section id="home" className="min-h-screen flex flex-col justify-center items-center relative pt-16">
+            <div className="absolute inset-0 -z-10 ">
+                <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background/20 dark:from-primary/10 dark:to-background/30" />
             </div>
-        </Container>
+		  
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="container mx-auto px-4 text-center">
+
+				
+				<h2 className="text-3xl md:text-6xl lg:text-6xl font-bold mb-6">
+					{text}
+					<span className="animate-pulse">|</span>
+				</h2>
+				<motion.p
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 2, duration: 1 }}
+					className="text-base md:text-1xl text-foreground/80 max-w-2xl mx-auto mb-8"
+					>
+					Building modern, fast, and intuitive web experiences.
+				</motion.p>
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 2.5, duration: 0.8 }}
+					className="flex flex-col sm:flex-row justify-center gap-4">
+				<Button size="lg" asChild>
+					<a href="#projects">View My Work</a>
+				</Button>
+				<Button size="lg" variant="outline" asChild>
+					<a href="#contact">Get In Touch</a>
+				</Button>
+                <Link className={buttonVariants({variant: "secondary"})} href="/CVMiguelCimildoro2025E.pdf" target="_blank">  
+                    <Paperclip className="mr-2"/>Download CV
+                </Link>   
+                </motion.div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 3, duration: 0.8 }}
+                className="absolute bottom-10"
+            >
+                <a
+                href="#about"
+                className="flex flex-col items-center text-foreground/70 hover:text-foreground transition-colors"
+                >
+                <span className="mb-2">Scroll Down</span>
+                <ArrowDown className="animate-bounce" />
+                </a>
+            </motion.div>
+        </section>
+        
     );
 };
 export default Introduction;
+// Remove the custom useState function
+

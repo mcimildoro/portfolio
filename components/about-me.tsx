@@ -1,66 +1,107 @@
 "use client"
 import Image from "next/image";
 
-import { dataAboutMe, dataSlider } from "../data";
-import Link from "next/link";
-import { dataPhone } from "../data";
-import Title from "./shared/title";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
-import { Button } from "./ui/button";
+import {  about } from "../data";
 
+import { motion  } from 'framer-motion';
+import { CodeXml, Palette , Globe , Zap } from 'lucide-react';
+
+
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 }
+};
+const aboutIcons = {
+    CodeXml: (props: React.ComponentProps<typeof CodeXml>) => <CodeXml  {...props} />,
+    Palette: (props:  React.ComponentProps<typeof Palette>) => <Palette {...props} />,
+    Globe: (props:  React.ComponentProps<typeof Globe>) => <Globe {...props} />,
+    Zap: (props:  React.ComponentProps<typeof Zap>) => <Zap {...props} />,
+};
 
 
 const AboutMe = () => {
+   
     return (
-        <div className="p-6 md:px-12  max-w-5xl mx-auto" id="about-me">
-            <Title title=" " subtitle="About me" />
-            <div className="grid md:grid-cols-2">
-                <div className="py-12 md:py-0 flex items-center justigy-center">
-                    {/* CAROUSEl */}    
-                    <Carousel opts={{align: "start"}} orientation="vertical" className="w-full max-w-sm h-fit">
-                        <CarouselContent className="-mt-1 h-[300px]">
-                            {dataSlider.map((data) =>
-                                <CarouselItem key={data.id}>
-                                    <div className="flex items-center justify-center">
-                                        <Image src={data.url} alt="Image" width={250} height={400} className="w-full h-auto rounded-lg" />
-                                        
-                                       
-                                    </div>
-                                </CarouselItem>
-                            )}
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
-                </div>
-                <div>
-                    <div className="grid md:grid-cols-1 mt-7 gap-4 ">
-                        {dataAboutMe.map((data) =>  
-                            <div key={data.id} className="border border-white-10 rounded-xl p-4 shadow-md  dark:bg-slate-800">
-                                {data.icon}
-                                <p className="my-2">{data.name}</p>
-                                <p className="text-gray-400">{data.description}</p>
-                            </div>
-                        )}
-                    </div>
-                    <p className="my-8">
-                    I am a frontend developer with experience in technologies such as React, Node.js, Python, JavaScript, Git, Tailwind CSS, and more.
-                    ditionally, I have experience in developing industrial applications using Ignition Automation (SCADA) and specialized tools for process monitoring and control.
-                    I Adam passionate about learning new technologies, tackling complex challenges, and sharing knowledge with the community, always striving to optimize performance and user experience in every project.</p>
-                
-                        {dataPhone.map((contact) => (
-                            <div key={contact.id}>
-                                <Link href={contact.link} target="_blank">
-                                    <Button>{contact.icon}Shall we talk?</Button>
-                                </Link>
-                            </div>
-                        ))}
+        <section id="about" className="py-20 md:py-32 bg-muted/30 dark:bg-muted/10 relative">
+            <div className="container mx-auto px-4">
+                <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+                className="text-center mb-16"
+                >
+                <motion.h2 variants={fadeIn} custom={0} className="text-3xl md:text-4xl font-bold mb-4">
+                    About Me
+                </motion.h2>
+                <motion.div variants={fadeIn} custom={1} className="w-20 h-1 bg-primary mx-auto mb-8" />
+                </motion.div>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8 }}
+                    className="relative"
+                >
+                    <div className="relative aspect-square max-w-md mx-auto">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-2xl transform -rotate-6" />
+                    <div className="absolute inset-0 bg-background/90 dark:bg-background/80 backdrop-blur-sm rounded-2xl border border-border transform rotate-3" />
+                    <div className="relative h-full w-full rounded-2xl overflow-hidden">
+                        <Image
+                        src="/cvme.jpg"
+                        alt="Profile"
+                        width={800}
+                        height={500}
+                        className="object-cover h-full w-full rounded-2xl"
+                        />
+                        
+                    </div>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    <h3 className="text-2xl font-bold mb-4">
+                        Hi, I`m <span className="text-primary">Miguel Cimildoro</span>
+                    </h3>
+                    <p className="text-foreground/80 mb-6">
+                        Passionate Frontend Developer focused on building modern, fast, and user-friendly web applications. I specialize in React, Next.js, TailwindCSS, 
+                        and performance optimization to create seamless digital experiences.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        
+                    {about.map((item) => (
+                       
+                        <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ delay: 0.4 + item.id * 0.1, duration: 0.6 }}
+                        className="flex flex-col items-center sm:items-start"
+                        >
+                            {aboutIcons[item.icon as keyof typeof aboutIcons]?.({ size: 25, color: "#fff", strokeWidth: 1 })}
+                            <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
+                            <p className="text-sm text-foreground/70 text-center sm:text-left">Description {item.description}</p>
+                        </motion.div>
+                    ))}
+                    </div>
                     
-                </div>   
+                </motion.div>
+                </div>
             </div>
-        </div>
+        </section>
+       
     );
 }
 
 export default AboutMe;
+
+
+

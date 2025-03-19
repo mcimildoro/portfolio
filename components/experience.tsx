@@ -1,35 +1,77 @@
 "use client"
 
-import { dataExperience } from "@/data";
-import Title from "./shared/title"
-import { BadgeCheck } from "lucide-react";
-import { Progress } from "./ui/progress";
-
+import { motion } from "framer-motion";
+import { skills } from "@/data";
 
 const Experience = () => {
     return (
-        <div className="p-6 md:px-12 py-6 md:py-36 max-w-5xl mx-auto" id="experience">
-            <Title title="Skills" subtitle="My experience" />
+        <>
        
-            <div className="grid md:grid-cols-2 gap-8 mt-5">
-                {dataExperience.map((data) =>(
-                    <div key={data.id} className="p-6 rounded-xl border border-gray-400">
-                        <h3 className="text-center text-xl">{data.title}</h3>
-                        <div className="grid md:grid-cols-2 gap-4">
-                            {data.experience.map((item) => (
-                                <div key={item.name} className="my-4">
-                                    <p className="flex gap-2 mb-2">
-                                        <BadgeCheck/>{item.name}
-                                    </p>
-                                    <p className="text-gray-400 ">{item.subtitle}</p>
-                                    <Progress value={item.value} className="w-[60%]"/>
-                                </div>
-                            ))}
+
+            <section id="skills" className="py-20 md:py-32 bg-muted/30 dark:bg-muted/10">
+            <div className="container mx-auto px-4">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
+                className="text-center mb-16"
+            >
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+                <div className="w-20 h-1 bg-primary mx-auto mb-8" />
+                <p className="text-foreground/80 max-w-2xl mx-auto">
+                Here are some of the technologies and tools I work with.
+                </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {skills.map((skillGroup, groupIndex) => (
+                <motion.div
+                    key={skillGroup.category}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, delay: groupIndex * 0.2 }}
+                    className="bg-card rounded-lg p-6 border border-border shadow-sm"
+                >
+                    <h3 className="text-xl font-bold mb-6 text-center">{skillGroup.category}</h3>
+                    <div className="space-y-6">
+                    {skillGroup.items.map((skill, index) => (
+                        <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.3 + index * 0.1 + groupIndex * 0.2,
+                        }}
+                        >
+                        <div className="flex justify-between mb-2">
+                            <span className="font-medium">{skill.name}</span>
+                            <span className="text-foreground/70">{skill.level}%</span>
                         </div>
+                        <div className="h-2 bg-muted rounded-full overflow-hidden">
+                            <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.level}%` }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.5 + index * 0.1 + groupIndex * 0.2,
+                            }}
+                            className="h-full bg-primary rounded-full"
+                            />
+                        </div>
+                        </motion.div>
+                    ))}
                     </div>
+                </motion.div>
                 ))}
             </div>
-        </div>
+            </div>
+            </section>
+</>
     )
 }
 

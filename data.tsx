@@ -1,10 +1,11 @@
-import { /*BellPlus*/ BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound } from "lucide-react";
+import React from "react";
+import { /*BellPlus*/ Braces , Briefcase, Brush, Code2 , Home, Mail, PanelsTopLeft, Phone, UserRound } from "lucide-react";
 
 export const dataAboutMe = [
     {
         id: 1,
         name: "Experience",
-        icon: <Briefcase />,
+        icon: () => <Briefcase size={20} />,  // ✅ Ahora es una función),
         description: "+5 years of experience",
     }
 ];
@@ -13,31 +14,31 @@ export const itemsNavbar = [
     {
         id: 1,
         title: "Home",
-        icon: <Home size={20} />,
+        icon: () => <Home size={20} />,  // ✅ Ahora es una función
         link: "#home",
     },
     {
         id: 2,
         title: "User",
-        icon: <UserRound size={20} />,
+        icon: () => <UserRound size={20} />,
         link: "#about-me",
     },
     {
         id: 3,
-        title: "Book",
-        icon: <BookText size={20} />,
-        link: "#services",
+        title: "Braces",
+        icon: () => <Braces size={20} />,
+        link: "#skills",
     },
     {
         id: 4,
-        title: "Target",
-        icon: <CodeSquare size={20} />,
-        link: "#portfolio",
+        title: "Layers",
+        icon: () => <Briefcase  size={20} />,
+        link: "#experience",
     },
     {
         id: 5,
-        title: "Home",
-        icon: <Mail size={20} />,
+        title: "Mail",
+        icon: () => <Mail size={20} />,
         link: "#contact",
     },
 ];
@@ -207,7 +208,7 @@ export const dataServices = [
     {
         id: 1,
         title: "Web Development",
-        icon: <PanelsTopLeft />,
+        icon: () => <PanelsTopLeft size={20} />,  // ✅ Ahora es una función),
         features: [
             {
                 name: "Custom web site development",
@@ -241,7 +242,7 @@ export const dataServices = [
     {
         id: 3,
         title: "UI/UX Design",
-        icon: <Brush />,
+        icon: () => <Brush size={20} />,  // ✅ Ahora es una función),
         features: [
             {
                 name: "Intuitive design for a smooth user experience",
@@ -275,21 +276,21 @@ export const dataContact = [
         title: "Phone",
         subtitle: "+34 722 477 525",
         link: "tel:+34722477525",
-        icon: <Phone />,
+        icon: () => <Phone size={20} />,  // ✅ Ahora es una función),
     },
     {
         id: 2,
         title: "Github",
         subtitle: "github.com/mcimildoro",
         link: "github.com/mcimildoro",
-        icon: <Code2 />,
+        icon: () => <Code2 size={20} />,  // ✅ Ahora es una función),
     },
     {
         id: 3,
         title: "Email",
         subtitle: "cimildoro@gmail.com",
         link: "mailto:cimildoro@gmail.com",
-        icon: <Inbox />,
+        icon: () => <Mail size={20} />,  // ✅ Ahora es una función),
     },
 ];
 
@@ -299,7 +300,7 @@ export const dataPhone = [
         title: "Phone",
         subtitle: "+34 722 477 525",
         link: "tel:+34722477525",
-        icon: <Phone />,
+        icon: () => <Phone size={20} />,  // ✅ Ahora es una función),
     }
 ];
 
@@ -345,3 +346,157 @@ export const dataTestimonials = [
         imageUrl: "/profile-5.jpeg",
     }
 ];
+
+export type aboutIconName = "CodeXml" | "Palette" | "Globe" | "Zap" ;
+export const about:{id: number,icon: aboutIconName, title: string, description: string }[] = [
+{
+    id:1,
+    icon: "CodeXml",
+    title: "Web Development",
+    description: "Building modern web applications with the latest technologies",
+    },
+    {
+    id:2,
+    icon: "Palette",
+    title: "UI/UX Design",
+    description: "Creating intuitive and visually appealing user interfaces",
+    },
+    {
+    id:3,
+    icon: "Globe",
+    title: "Responsive Design",
+    description: "Ensuring websites look great on all devices and screen sizes",
+    },
+    {
+    id:4,
+    icon: "Zap",
+    title: "Performance",
+    description: "Optimizing websites for speed and performance",
+    },
+];
+
+export const projects = [
+    {
+        id: 1,
+        title: "Balanced 7v7 Team Generator",
+        description: "A Next.js app that creates 3 balanced football teams of 7 players using Firebase.",
+        image: "/teams.png",
+        tags: ["Next.js", "Firebase", "TailwindCSS", "React"],
+        github: "https://github.com/mcimildoro/fut7generator",
+        demo: "https://fut7app-next.web.app",
+        longDescription:
+          "This application allows users to generate 3 balanced football teams (7v7) automatically. Using a custom algorithm, the system ensures that no team is stronger or weaker than the others. The player data is stored and retrieved from Firebase, and the app is deployed using Firebase Hosting. It features a responsive UI built with TailwindCSS and a login system for user authentication.",
+      },
+      {
+        id: 2,
+        title: "Household Expense Tracker",
+        description: "A Next.js app to manage and track household expenses with shared user access.",
+        image: "/ex-tracker.png",
+        tags: ["Next.js", "PostgreSQL", "Neon Console", "TailwindCSS", "Vercel"],
+        github: "https://github.com/mcimildoro/ExpenseTracker",
+        demo: "https://householder.vercel.app/",
+        longDescription:
+          "This app simplifies household expense tracking, similar to banking apps. Built with Next.js, it uses PostgreSQL (Neon Console) for data management and supports multi-user authentication. Deployed on Vercel, it offers a responsive UI with TailwindCSS, allowing users to log in, add expenses, categorize spending, and view financial summaries.",
+      },
+      {
+        id: 3,
+        title: "ConInversión - Investment Platform 🚧 (In Construction)",
+        description: "A financial platform that guides users in investment funds with subscription-based access.",
+        image: "/coninversion.svg",
+        tags: ["Next.js", "PostgreSQL", "Drizzle ORM", "TailwindCSS", "Vercel", "Auth0", "Subscription"],
+        github: "https://github.com/mcimildoro/conInversion",
+        demo: "https://con-inversion.vercel.app/",
+        longDescription:
+          "ConInversión is a financial platform that helps users invest in funds with expert guidance. It offers subscription-based access to investment plans and includes an admin panel for managing users and subscriptions. Built with Next.js, TailwindCSS, and PostgreSQL (Drizzle ORM), it's deployed on Vercel for high performance and scalability.",
+      }
+  
+]
+
+
+export const skills = [
+    {
+      category: "Frontend",
+      items: [
+        { name: "HTML5", level: 90 },
+        { name: "CSS3", level: 85 },
+        { name: "JavaScript", level: 80 },
+        { name: "TypeScript", level: 55 },
+        { name: "React", level: 70 },
+        { name: "Next.js", level: 75 },
+        { name: "TailwindCSS", level: 50 },
+        { name: "Shadcn/UI", level: 90 },
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        { name: "Node.js", level: 65 },
+        { name: "MySQL", level: 80 },
+        { name: "Drizzle ORM", level: 75 },
+        { name: "PostgreSQL", level: 70 },
+        { name: "Firebase", level: 80 },
+        { name: "Supabase", level: 85 },
+        { name: "Python", level: 70 },
+        { name: "Java", level: 50 },
+
+      ],
+    },
+    {
+      category: "Tools & Others",
+      items: [
+        { name: "Git", level: 85 },
+        { name: "Eslint", level: 85 },
+        { name: "VS Code", level: 90 },
+        { name: "Figma", level: 45 },
+        { name: "Responsive Design", level: 90 },
+        { name: "React Testing Library", level: 50 },
+        { name: "Vitest", level: 55 },
+        { name: "Lazy Loading", level: 55 },
+      ],
+    },
+  ]
+
+
+  export const experiences = [
+    {
+      title: "Frontend Developer",
+      company: "Gransolar Group",
+      location: "Madrid",
+      period: "2022 - 2025",
+      description:
+        "Developed industrial applications using SCADA Ignition and created user manuals with React and TailwindCSS to enhance usability and system documentation.",
+    },
+    {
+      title: "Frontend Developer",
+      company: "Verticecrea CA",
+      location: "Madrid - Remote",
+      period: "2020 - 2022",
+      description:
+        "Built web applications with React.js, Next.js, and TailwindCSS. Implemented SSR/SSG for performance and developed responsive interfaces. Collaborated with clients to deliver scalable solutions.",
+    },
+    {
+      title: "FullStack Developer",
+      company: "Banco Santander - Openscript Consulting",
+      location: "Madrid",
+      period: "2018 - 2020",
+      description:
+        "Developed and maintained banking applications using J2EE, XML, and Apache HTTP Server. Diagnosed server failures, automated tasks with Bash scripting, and optimized system stability and performance.",
+    },
+    {
+      title: "Software Developer",
+      company: "Hewlett Packard - ABDE Business Consulting",
+      location: "Madrid",
+      period: "2017 - 2018",
+      description:
+        "Developed data collectors using IUM, Bash, and Java. Created and executed Shell, AWK, and PL/SQL scripts, managing version control with SVN. Worked on projects for Euskaltel and Orange under Agile methodologies, using JIRA for task management.",
+    },
+    ,
+    {
+      title: "Frontend Developer",
+      company: "Gomega Apps C.A.",
+      location: "Caracas, Venezuela",
+      period: "2017 - 2018",
+      description:
+        "Contributed to a bank financing application for Banco CANTV, improving user experience and financial process efficiency.",
+    }
+  ]

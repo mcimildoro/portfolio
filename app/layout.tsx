@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${urbanist.className} antialiased`}>
           <ThemeProvider
@@ -24,8 +24,9 @@ export default function RootLayout({
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
+            storageKey="theme"
           >
-          {children}
+            {children}
           </ThemeProvider>
       </body>
     </html>
