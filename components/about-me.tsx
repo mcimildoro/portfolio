@@ -51,7 +51,7 @@ const AboutMe = () => {
                         <Image
                         src="/cvme.jpg"
                         alt="Profile"
-                        width={800}
+                        width={500}
                         height={500}
                         className="object-cover h-full w-full rounded-2xl"
                         />
