@@ -49,11 +49,11 @@ const AboutMe = () => {
                     <div className="absolute inset-0 bg-background/90 dark:bg-background/80 backdrop-blur-sm rounded-2xl border border-border transform rotate-3" />
                     <div className="relative h-full w-full rounded-2xl overflow-hidden">
                     <Image
-                    src="/cvme.jpg" // Asegúrate de que esté en la carpeta /public
-                    alt="Profile"
-                    width={500}
-                    height={500}
-                    className="object-cover h-full w-full rounded-2xl"
+                        src="/cvme.png"
+                        alt="Profile"
+                        width={500}
+                        height={500}
+                        className="object-cover h-full w-full rounded-2xl"
                     />
                         
                     </div>
