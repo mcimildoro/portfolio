@@ -5,7 +5,7 @@ import AboutMe from "@/components/about-me";
 import Experience from "@/components/experience";
 import Services from "@/components/workExperience";
 //import Portfolio from "@/components/portfolio";
-//import Testimonials from "@/components/testimonials";
+
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -24,7 +24,7 @@ export default function Home() {
       <Services />
       {/*<Portfolio />*/}
       
-      {/*<Testimonials />*/}
+   
       <Contact />
       <Footer />
       <SpeedInsights />
