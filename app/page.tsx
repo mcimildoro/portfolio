@@ -10,7 +10,8 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Projects from "@/components/projects";
-import "./globals.css";
+
+
 
 export default function Home() {
   return (
