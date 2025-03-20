@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${urbanist.className} antialiased bg-background text-foreground`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="light"
+            defaultTheme="system"
             enableSystem
             disableTransitionOnChange
             storageKey="theme"
