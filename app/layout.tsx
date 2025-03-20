@@ -1,4 +1,3 @@
-"use client"
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
