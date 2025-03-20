@@ -69,7 +69,7 @@ const ContactForm = () => {
                         <FormMessage />
                     </FormItem>
                 )} />
-                <Button type="submit">Send</Button>
+                <Button type="submit" className='w-full md:w-40'>Send</Button>
             </form>
         )}
             

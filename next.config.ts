@@ -7,6 +7,20 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: false,
   },
+
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY", // Evita que la página se cargue en un iframe
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
