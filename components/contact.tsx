@@ -17,11 +17,11 @@ const Contact = () => {
                         <div key={contact.id} className="flex flex-col items-center dark:bg-slate-800 rounded-lg mb-5 p-4">
                             {contact.icon()}
                             <p>{contact.title}</p>
-                            <p>{contact.subtitle}</p>
+                            
                             <Link href={contact.link} target="_blank"
                                 className={buttonVariants({variant: "link"})}
                             >
-                                Send message
+                                {contact.subtitle}
                             </Link>
                         </div>
                     ))}                   

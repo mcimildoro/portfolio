@@ -282,7 +282,7 @@ export const dataContact = [
         id: 2,
         title: "Github",
         subtitle: "github.com/mcimildoro",
-        link: "github.com/mcimildoro",
+        link: "https://github.com/mcimildoro",
         icon: () => <Code2 size={20} />,  // ✅ Ahora es una función),
     },
     {
