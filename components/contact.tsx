@@ -10,7 +10,7 @@ const Contact = () => {
     const { t } = useLanguage(); 
     return (
         <section className="bg-background dark:bg-background-dark">
-            <div className="p-4 md:ox-12 md:pty-44 max-w-5xl mx-auto" id="contact ">
+            <div className="p-4 md:ox-12 md:pty-44 max-w-5xl mx-auto" id="contact">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
