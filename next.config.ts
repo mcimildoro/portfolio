@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Para evitar optimización de imágenes en local
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
 };
 
