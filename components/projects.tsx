@@ -25,7 +25,7 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8" />
           <p className="text-foreground/80 max-w-2xl mx-auto">
-            Here are some of my recent projects. Click on a project to learn more about it.
+          Explore some of my recent work. Click on a project to discover more details and insights.
           </p>
         </motion.div>
 
@@ -54,6 +54,7 @@ export default function Projects() {
               >
                 <div className="relative h-60 overflow-hidden">
                   <Image
+                    priority={false}
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     width={800}

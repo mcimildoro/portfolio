@@ -13,7 +13,7 @@ const Experience = () => {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.8 }}
                 className="text-center mb-16"
             >
@@ -30,7 +30,7 @@ const Experience = () => {
                     key={skillGroup.category}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{ duration: 0.8, delay: groupIndex * 0.2 }}
                     className="bg-card rounded-lg p-6 border border-border shadow-sm"
                 >
@@ -41,7 +41,7 @@ const Experience = () => {
                         key={skill.name}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        viewport={{ once: true, margin: "-100px" }}
+                        viewport={{ once: true, amount: 0.1 }}
                         transition={{
                             duration: 0.5,
                             delay: 0.3 + index * 0.1 + groupIndex * 0.2,
@@ -55,7 +55,7 @@ const Experience = () => {
                             <motion.div
                             initial={{ width: 0 }}
                             whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true, margin: "-100px" }}
+                            viewport={{ once: true, amount: 0.1 }}
                             transition={{
                                 duration: 1,
                                 delay: 0.5 + index * 0.1 + groupIndex * 0.2,
