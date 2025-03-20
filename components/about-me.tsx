@@ -88,7 +88,7 @@ const AboutMe = () => {
                         >
                             {aboutIcons[item.icon as keyof typeof aboutIcons]?.({ size: 25, color: "#fff", strokeWidth: 1 })}
                             <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
-                            <p className="text-sm text-foreground/70 text-center sm:text-left">Description {item.description}</p>
+                            <p className="text-sm text-foreground/70 text-center sm:text-left">{item.description}</p>
                         </motion.div>
                     ))}
                     </div>
