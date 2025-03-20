@@ -5,6 +5,8 @@ import Link from "next/link";
 import ToggleTheme from "./toggle-theme";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { ToggleLanguage } from "./toggleLanguage";
+
 
 const fadeIn = {
     hidden: { opacity: 0 },
@@ -12,7 +14,7 @@ const fadeIn = {
   };
 
 const Navbar = () => {
-
+    
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -42,6 +44,7 @@ const Navbar = () => {
                         </div>
                     ))}
                     <ToggleTheme />
+                    <ToggleLanguage />
                 </div>
         </motion.nav>
     );

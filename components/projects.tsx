@@ -6,14 +6,16 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Github, ExternalLink } from "lucide-react"
-import {projects} from "@/data"
+import { projects } from "@/data"
+import { useLanguage } from "@/context/LanguageContext"
 
 
 export default function Projects() {
+  const { t } = useLanguage(); // Obtener el objeto de traducciones
   const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null)
 
   return (
-    <section id="projects" className="py-20 md:py-32">
+    <section id="projects" className="py-20 md:py-32 bg-background dark:bg-background-dark">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,10 +24,10 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.descProject.title}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8" />
           <p className="text-foreground/80 max-w-2xl mx-auto">
-          Explore some of my recent work. Click on a project to discover more details and insights.
+          {t.descProject.description}
           </p>
         </motion.div>
 
@@ -40,18 +42,19 @@ export default function Projects() {
          
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           <AnimatePresence>
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-card rounded-lg overflow-hidden border border-border shadow-md hover:shadow-lg transition-all duration-300"
-              >
+            {t.projects.project.map((project, index) => 
+              project && (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative bg-card rounded-lg overflow-hidden border border-border shadow-md hover:shadow-lg transition-all duration-300"
+                >
                 <div className="relative h-60 overflow-hidden">
                   <Image
                     priority={false}
@@ -65,7 +68,7 @@ export default function Projects() {
                     <h3 className="text-white text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-white/90 text-sm text-center mb-4">{project.description}</p>
                     <Button onClick={() => setSelectedProject(project)} size="sm">
-                      View Details
+                        {t.projects.viewDetails}
                     </Button>
                   </div>
                 </div>
@@ -79,7 +82,7 @@ export default function Projects() {
                     ))}
                   </div>
                   <Button onClick={() => setSelectedProject(project)} variant="outline" size="sm" className="w-full">
-                    View Details
+                    {t.projects.viewDetails}
                   </Button>
                 </div>
               </motion.div>

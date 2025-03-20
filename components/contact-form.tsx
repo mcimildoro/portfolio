@@ -10,8 +10,11 @@ import { useForm } from 'react-hook-form';
 import { Form, FormField, FormItem, FormControl, FormMessage } from './ui/form';
 import { z } from 'zod';
 import { Button } from './ui/button';
+import { useLanguage } from '@/context/LanguageContext';
 
 const ContactForm = () => {
+    const { t } = useLanguage(); 
+
     const [sucessForm, setSucessForm] = useState(false);
 
     const formSchema = z.object({
@@ -48,7 +51,7 @@ const ContactForm = () => {
                 <FormField control={form.control} name="username" render={({field}) =>(
                     <FormItem>
                         <FormControl>
-                            <Input placeholder="Your name" {...field} className="dark:bg-slate-800" />
+                            <Input placeholder={t.form.name} {...field} className="dark:bg-slate-800" />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -56,7 +59,7 @@ const ContactForm = () => {
                 <FormField control={form.control} name="email" render={({field}) =>(
                     <FormItem>
                         <FormControl>
-                            <Input placeholder="Your email" {...field} className="dark:bg-slate-800" />
+                            <Input placeholder={t.form.email} {...field} className="dark:bg-slate-800" />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
@@ -64,12 +67,12 @@ const ContactForm = () => {
                 <FormField control={form.control} name="message" render={({field}) =>(
                     <FormItem>
                         <FormControl>
-                            <Textarea placeholder="Write your message" {...field} className="dark:bg-slate-800" />
+                            <Textarea placeholder={t.form.message} {...field} className="dark:bg-slate-800" />
                         </FormControl>
                         <FormMessage />
                     </FormItem>
                 )} />
-                <Button type="submit" className='w-full md:w-40'>Send</Button>
+                <Button type="submit" className='w-full md:w-40'>{t.form.send}</Button>
             </form>
         )}
             

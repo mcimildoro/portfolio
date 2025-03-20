@@ -3,12 +3,14 @@
 import { Calendar, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { experiences } from "@/data";
-
+import { useLanguage } from "@/context/LanguageContext";
 
 
 const Services = () => {
+    const { t } = useLanguage(); 
+
     return (
-        <section id="experience" className="py-20 md:py-32">
+        <section id="experience" className="py-20 md:py-32 bg-background dark:bg-background-dark">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -17,15 +19,15 @@ const Services = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                     >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.experience.title}</h2>
                     <div className="w-20 h-1 bg-primary mx-auto mb-8" />
-                        <p className="text-foreground/80 max-w-2xl mx-auto">My professional journey and work experience.</p>
+                        <p className="text-foreground/80 max-w-2xl mx-auto">{t.experience.description}</p>
                 </motion.div>
                     <div className="relative max-w-3xl mx-auto">
             {/* Timeline line */}
                 <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-border transform md:-translate-x-1/2" />
 
-                {experiences.map((exp, index) => (
+                {t.experience.exp.map((exp, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 20 }}

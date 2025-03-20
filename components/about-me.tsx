@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
 
-import {  about } from "../data";
-
+//import {  about } from "../data";
+import { useLanguage } from "../context/LanguageContext";
 import { motion  } from 'framer-motion';
 import { CodeXml, Palette , Globe , Zap } from 'lucide-react';
 
@@ -20,9 +20,10 @@ const aboutIcons = {
 
 
 const AboutMe = () => {
-   
+    const { t } = useLanguage();
+
     return (
-        <section id="about" className="py-20 md:py-32 bg-muted/30 dark:bg-muted/10 relative">
+        <section id="about" className="py-20 md:py-32 bg-background dark:bg-background-dark relative">
             <div className="container mx-auto px-4">
                 <motion.div
                 initial="hidden"
@@ -31,12 +32,12 @@ const AboutMe = () => {
                 className="text-center mb-16"
                 >
                 <motion.h2 variants={fadeIn} custom={0} className="text-3xl md:text-4xl font-bold mb-4">
-                    About Me
+                    {t.aboutMe.title}
                 </motion.h2>
                 <motion.div variants={fadeIn} custom={1} className="w-20 h-1 bg-primary mx-auto mb-8" />
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -67,16 +68,15 @@ const AboutMe = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <h3 className="text-2xl font-bold mb-4">
-                        Hi, I`m <span className="text-primary">Miguel Cimildoro</span>
+                        {t.aboutMe.name}
                     </h3>
                     <p className="text-foreground/80 mb-6">
-                        Passionate Frontend Developer focused on building modern, fast, and user-friendly web applications. I specialize in React, Next.js, TailwindCSS, 
-                        and performance optimization to create seamless digital experiences.
+                        {t.aboutMe.description}
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                         
-                    {about.map((item) => (
+                    {t.aboutMe.about.map((item) => (
                        
                         <motion.div
                         key={item.id}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const urbanist = Urbanist({subsets: ["latin"]});
 
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${urbanist.className} antialiased bg-background text-foreground`} >
+        className={`${urbanist.className} antialiased `} >
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -26,7 +27,7 @@ export default function RootLayout({
             disableTransitionOnChange
             storageKey="theme"
           >
-            {children}
+            <LanguageProvider>{children}</LanguageProvider>
           </ThemeProvider>
       </body>
     </html>

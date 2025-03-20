@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import { skills } from "@/data";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Experience = () => {
+    const { t } = useLanguage(); 
     return (
         <>
        
 
-            <section id="skills" className="py-20 md:py-32 bg-muted/30 dark:bg-muted/10">
+            <section id="skills" className="py-20 md:py-32 bg-background dark:bg-background-dark">
             <div className="container mx-auto px-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -17,10 +19,10 @@ const Experience = () => {
                 transition={{ duration: 0.8 }}
                 className="text-center mb-16"
             >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.skills.title}</h2>
                 <div className="w-20 h-1 bg-primary mx-auto mb-8" />
                 <p className="text-foreground/80 max-w-2xl mx-auto">
-                Here are some of the technologies and tools I work with.
+                    {t.skills.description}
                 </p>
             </motion.div>
 
