@@ -6,7 +6,7 @@ export const translations = {
 
         descIntro: {
             title: "Front-end developer",
-            description: "Building modern, fast, and intuitive web experiences.",
+            description: "I'm no magician, but I make divs float and bugs disappear.",
             buttonWork: "View Work",
             buttonTouch: "Get in Touch",
             buttonCV: "Download CV",
@@ -180,7 +180,7 @@ export const translations = {
         form: {
             name: "Your Name",
             email: "Your Email",
-            message: "Escribe tu mensaje aquí...",
+            message: "Write your message here...",
             send: "Send"
         }
     },
@@ -193,7 +193,7 @@ export const translations = {
 
         descIntro: {
             title: "Desarrollador Front-end",
-            description: "Creando experiencias web modernas, rápidas e intuitivas.",
+            description: "No soy mago, pero hago que los divs floten y los bugs desaparezcan.",
             buttonWork: "Mi Trabajo",
             buttonTouch: "Concactame",
             buttonCV: "Descargar CV",
