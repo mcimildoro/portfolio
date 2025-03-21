@@ -1,9 +1,11 @@
 "use client"
 import Link from 'next/link';
 import { Separator } from "@/components/ui/separator"
+import { useLanguage } from '@/context/LanguageContext';
 
 
 const Footer = () => {
+    const { t } = useLanguage(); 
     return (
         <section className="bg-background dark:bg-background-dark">
             <footer className="max-w-3xl mx-auto ">
@@ -12,10 +14,10 @@ const Footer = () => {
                         <h4 className="text-3xl font-bold my-6 md:my-0 text-center">mcimildoro</h4>
                     </div>
                     <div className="px-2 flex justify-between md:gap-8 items-center">
-                        <Link href="#about-me">About me</Link>
-                        <Link href="#skills">Skills</Link>
-                        <Link href="#projects">Portfolio</Link>
-                        <Link href="#experience">Work Experience</Link>
+                        <Link href="#about-me">{t.footer.about}</Link>
+                        <Link href="#skills">{t.footer.skills}</Link>
+                        <Link href="#projects">{t.footer.projects}</Link>
+                        <Link href="#experience">{t.footer.experience}</Link>
     
                     
                     </div>
@@ -23,7 +25,7 @@ const Footer = () => {
 
                 <Separator className='my-4'/>
                 <div className="text-center">
-                    <p>&copy; 2025 mcimildoro. All rights reserved.</p>
+                    <p>&copy; 2025 mcimildoro. {t.footer.derechos}</p>
                 </div>
             </footer>
         </section>

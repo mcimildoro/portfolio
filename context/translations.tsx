@@ -1,4 +1,5 @@
 
+
 import { Phone, Code2, Mail } from 'lucide-react';
 
 export const translations = {
@@ -182,6 +183,15 @@ export const translations = {
             email: "Your Email",
             message: "Write your message here...",
             send: "Send"
+        },
+
+        footer: {
+            title: "mcimildoro",
+            about: "About",
+            skills: "Skills",
+            projects: "Portfolio",
+            experience: "Work Experience",
+            derechos: "All rights reserved."
         }
     },
 
@@ -369,7 +379,17 @@ export const translations = {
             email: "Correo Electrónico",
             message: "Escribe tu mensaje aquí...",
             send: "Enviar"
+        },
+
+        footer: {
+            title: "mcimildoro",
+            about: "Sobre mi",
+            skills: "Habilidades",
+            projects: "Proyectos",
+            experience: "Experiencia",
+            derechos: "Todos los derechos reservados."
         }
+
     }
 }
 
