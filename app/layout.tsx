@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/context/LanguageContext";
 
+
 const urbanist = Urbanist({subsets: ["latin"]});
 
 export const metadata: Metadata = {

@@ -5,7 +5,7 @@ import AboutMe from "@/components/about-me";
 import Experience from "@/components/experience";
 import Services from "@/components/workExperience";
 //import Portfolio from "@/components/portfolio";
-
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -16,6 +16,7 @@ import Projects from "@/components/projects";
 export default function Home() {
   return (
     <main className="pb-40">
+      <GoogleAnalytics trackPageViews />
       <Navbar />
       <Introduction />
       <AboutMe />
