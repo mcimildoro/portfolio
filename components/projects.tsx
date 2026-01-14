@@ -42,7 +42,7 @@ export default function Projects() {
          
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <AnimatePresence>
             {t.projects.project.map((project, index) => 
               project && (
@@ -55,14 +55,14 @@ export default function Projects() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative bg-card rounded-lg overflow-hidden border border-border shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                <div className="relative h-60 overflow-hidden">
+                <div className="relative h-60 overflow-hidden bg-white">
                   <Image
                     priority={false}
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     width={800}
                     height={600}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                    className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110 p-4"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6">
                     <h3 className="text-white text-xl font-bold mb-2">{project.title}</h3>
@@ -107,13 +107,13 @@ export default function Projects() {
                   </div>
                 </DialogDescription>
               </DialogHeader>
-              <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-4">
+              <div className="relative w-full overflow-hidden rounded-lg mb-4 bg-white p-4">
                 <Image
                   src={selectedProject.image || "/placeholder.svg"}
                   alt={selectedProject.title}
                   width={800}
-                  height={600}
-                  className="object-cover w-full h-full"
+                  height={450}
+                  className="object-contain w-full h-auto max-h-[400px]"
                 />
               </div>
               <p className="text-foreground/80 mb-6">{selectedProject.longDescription}</p>

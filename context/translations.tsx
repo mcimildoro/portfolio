@@ -99,6 +99,17 @@ export const translations = {
                     demo: "https://con-inversion.vercel.app/",
                     longDescription:
                     "ConInversión is a financial platform that helps users invest in funds with expert guidance. It offers subscription-based access to investment plans and includes an admin panel for managing users and subscriptions. Built with Next.js, TailwindCSS, and PostgreSQL (Drizzle ORM), it's deployed on Vercel for high performance and scalability.",
+                },
+                {
+                    id: 4,
+                    title: "FactualPay",
+                    description: "Analytics platform that transforms financial data into interactive dashboards.",
+                    image: "/factualpay.png",
+                    tags: ["React 19", "TypeScript", "Redux", "Zustand", "Apache Superset", "TailwindCSS", "Radix UI", "Cypress"],
+                    github: "#",
+                    demo: "https://factualpay.com/",
+                    longDescription:
+                    "An analytics platform that transforms financial data into interactive dashboards. Built with React 19, TypeScript, Redux and Zustand for state management, using Apache Superset for embedded visualizations. My role involved implementing an 8-step wizard flow that guides users from data import to dashboard creation, optimizing performance with lazy loading, and securing the application with role-based authentication. The stack includes TailwindCSS, Radix UI for accessible components, and Cypress for E2E testing. The application enables fintech companies to configure data schemas, map metrics, ingest millions of records from S3, and visualize real-time insights.",
                 }
             ],
         },
@@ -107,6 +118,14 @@ export const translations = {
             title: "Work Experience",
             description: "My professional journey and work experience.",
             exp: [
+                {
+                    title: "Frontend Developer",
+                    company: "FactualPay",
+                    location: "Remote",
+                    period: "2025 - Present",
+                    description:
+                      "Developed an analytics platform transforming financial data into interactive dashboards using React 19, TypeScript, Redux, and Zustand. Implemented an 8-step wizard flow guiding users from data import to dashboard creation, optimized performance with lazy loading, and secured the application with role-based authentication. Integrated Apache Superset for embedded visualizations and Cypress for E2E testing.",
+                  },
                 {
                     title: "Frontend Developer",
                     company: "Gransolar Group",
@@ -295,6 +314,17 @@ export const translations = {
                     demo: "https://con-inversion.vercel.app/",
                     longDescription:
                         "ConInversión es una plataforma financiera que ayuda a los usuarios a invertir en fondos con la orientación de expertos. Ofrece acceso por suscripción a planes de inversión e incluye un panel de administración para gestionar usuarios y suscripciones. Construida con Next.js, TailwindCSS y PostgreSQL (Drizzle ORM), está desplegada sobre Vercel para un alto rendimiento y escalabilidad"
+                },
+                {
+                    id: 4,
+                    title: "FactualPay",
+                    description: "Plataforma de analytics que transforma datos financieros en dashboards interactivos.",
+                    image: "/factualpay.png",
+                    tags: ["React 19", "TypeScript", "Redux", "Zustand", "Apache Superset", "TailwindCSS", "Radix UI", "Cypress"],
+                    github: "#",
+                    demo: "https://factualpay.com/",
+                    longDescription:
+                        "Plataforma de analytics que transforma datos financieros en dashboards interactivos. Está construida en React 19, TypeScript, Redux y Zustand para el state management, y usa Apache Superset para las visualizaciones embebidas. Mi rol involucró implementar el flujo wizard de 8 pasos que guía al usuario desde la importación de datos hasta la creación de dashboards, optimizando el rendimiento con lazy loading, asegurando la aplicación con autenticación basada en roles. El stack incluye TailwindCSS, Radix UI para componentes accesibles, y Cypress para testing E2E. La aplicación permite a empresas fintech configurar esquemas de datos, mapear métricas, ingerir millones de registros desde S3 y visualizar insights en tiempo real."
                 }
             ],
         },
@@ -303,6 +333,14 @@ export const translations = {
             title: "Explora mi experiencia",
             description: "Mi trayectoria profesional y experiencia laboral.",
             exp: [
+                {
+                    title: "Frontend Developer",
+                    company: "FactualPay",
+                    location: "Remoto",
+                    period: "2025 - Presente",
+                    description:
+                      "Desarrollé una plataforma de analytics que transforma datos financieros en dashboards interactivos usando React 19, TypeScript, Redux y Zustand. Implementé un flujo wizard de 8 pasos que guía a los usuarios desde la importación de datos hasta la creación de dashboards, optimicé el rendimiento con lazy loading y aseguré la aplicación con autenticación basada en roles. Integré Apache Superset para visualizaciones embebidas y Cypress para testing E2E.",
+                  },
                 {
                     title: "Frontend Developer",
                     company: "Gransolar Group",
